@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: Создать компоненты, SCSS">
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить useState для pizza count">
+      <change afterPath="$PROJECT_DIR$/src/assets/pizzas.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PizzaCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/arrow-top.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/arrow-top.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/cart.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/empty-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/empty-cart.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/grey-arrow-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/grey-arrow-left.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/pizza-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/pizza-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/plus.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/trash.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/trash.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +39,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Обучение/dev/react-pizza/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\Обучение\\dev\\react-pizza\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -40,6 +52,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Обучение\dev\react-pizza\src" />
       <recent name="D:\Обучение\dev\react-pizza" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Обучение\dev\react-pizza\src\assets" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -68,7 +83,9 @@
       <workItem from="1667934024913" duration="185000" />
       <workItem from="1667934221649" duration="3539000" />
       <workItem from="1668012364543" duration="9309000" />
-      <workItem from="1668100666462" duration="1964000" />
+      <workItem from="1668100666462" duration="2038000" />
+      <workItem from="1668249923195" duration="6258000" />
+      <workItem from="1668275937741" duration="3449000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -91,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668021965536</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="features: добавить useState для pizza count">
+      <created>1668103350399</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668103350399</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +148,11 @@
     <MESSAGE value="подключить editorconfig и eslint" />
     <MESSAGE value="подготовить проект к разработке" />
     <MESSAGE value="features: Создать компоненты, SCSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="features: Создать компоненты, SCSS" />
+    <MESSAGE value="features: добавить useState для pizza count" />
+    <option name="LAST_COMMIT_MESSAGE" value="features: добавить useState для pizza count" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
