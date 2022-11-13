@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить useState для pizza count">
-      <change afterPath="$PROJECT_DIR$/src/assets/pizzas.json" afterDir="false" />
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить компонент пицц и категории, рендер списка, spread-оператор">
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PizzaCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/arrow-top.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/arrow-top.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cart.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/cart.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/empty-cart.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/empty-cart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/grey-arrow-left.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/grey-arrow-left.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/pizza-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/pizza-logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/plus.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/plus.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/trash.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/trash.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +32,15 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Обучение/dev/react-pizza/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files/JetBrains/WebStorm 2022.1.3/plugins/prettierJS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Сережа\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\Обучение\\dev\\react-pizza\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -85,7 +82,8 @@
       <workItem from="1668012364543" duration="9309000" />
       <workItem from="1668100666462" duration="2038000" />
       <workItem from="1668249923195" duration="6258000" />
-      <workItem from="1668275937741" duration="3449000" />
+      <workItem from="1668275937741" duration="5933000" />
+      <workItem from="1668336226636" duration="3911000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -115,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668103350399</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="features: добавить компонент пицц и категории, рендер списка, spread-оператор">
+      <created>1668279718663</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668279718663</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,7 +154,8 @@
     <MESSAGE value="подготовить проект к разработке" />
     <MESSAGE value="features: Создать компоненты, SCSS" />
     <MESSAGE value="features: добавить useState для pizza count" />
-    <option name="LAST_COMMIT_MESSAGE" value="features: добавить useState для pizza count" />
+    <MESSAGE value="features: добавить компонент пицц и категории, рендер списка, spread-оператор" />
+    <option name="LAST_COMMIT_MESSAGE" value="features: добавить компонент пицц и категории, рендер списка, spread-оператор" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

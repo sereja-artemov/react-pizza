@@ -18,12 +18,12 @@ function PizzaCard({
       <div className="pizza-block__selector">
         <ul>
           {types.map((type, index) => (
-            <li onClick={() => setActiveType(index)} className={activeType === index ? 'active' : ''}>{typeNames[type]}</li>
+            <li key={type} onClick={() => setActiveType(index)} className={activeType === index ? 'active' : ''}>{typeNames[type]}</li>
           ))}
         </ul>
         <ul>
           {sizes.map((size, index) => (
-            <li onClick={() => setActiveSize(index)} className={activeSize === index ? 'active' : ''}>{size} см.</li>
+            <li key={size} onClick={() => setActiveSize(index)} className={activeSize === index ? 'active' : ''}>{size} см.</li>
           ))}
         </ul>
       </div>

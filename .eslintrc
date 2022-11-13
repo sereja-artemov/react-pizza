@@ -3,10 +3,8 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "extends": "airbnb-base",
+  "extends": ["airbnb-base", "prettier"],
   "rules": {
-    //    "no-unused-vars": "off",
-    "no-underscore-dangle": ["error",{"allow":["_id"]}],
     "import/extensions": [
       "error",
       "ignorePackages",
