@@ -15,9 +15,14 @@ function App() {
 
   function getPizzaItems() {
     fetch('https://63767267b5f0e1eb850c0eef.mockapi.io/items')
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          throw new Error('Упс, что-то сломалось')
+        }
+        return res.json()
+      })
       .then(data => setPizzaItems(data))
-      .catch(err => err)
+      .catch(err => console.log(err))
   }
 
   return (

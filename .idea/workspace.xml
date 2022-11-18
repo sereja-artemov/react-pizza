@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить компонент пицц и категории, рендер списка, spread-оператор">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="fix: eslint function no-use-before-define">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,11 @@
       <workItem from="1668100666462" duration="2038000" />
       <workItem from="1668249923195" duration="6258000" />
       <workItem from="1668275937741" duration="5933000" />
-      <workItem from="1668336226636" duration="3911000" />
+      <workItem from="1668336226636" duration="5455000" />
+      <workItem from="1668361479840" duration="17000" />
+      <workItem from="1668618371801" duration="24000" />
+      <workItem from="1668704940740" duration="1281000" />
+      <workItem from="1668789490960" duration="3132000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -120,7 +119,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668279718663</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="features: добавить popup сортировки и уникальный key">
+      <created>1668340515173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668340515173</updated>
+    </task>
+    <task id="LOCAL-00007" summary="features: добавить запрос на получение пиццы с бэкенда (fetch)">
+      <created>1668792298824</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668792298824</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix: eslint function no-use-before-define">
+      <created>1668792347692</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668792347692</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +175,11 @@
     <MESSAGE value="features: Создать компоненты, SCSS" />
     <MESSAGE value="features: добавить useState для pizza count" />
     <MESSAGE value="features: добавить компонент пицц и категории, рендер списка, spread-оператор" />
-    <option name="LAST_COMMIT_MESSAGE" value="features: добавить компонент пицц и категории, рендер списка, spread-оператор" />
+    <MESSAGE value="features: добавить popup сортировки" />
+    <MESSAGE value="features: добавить popup сортировки и уникальный key" />
+    <MESSAGE value="features: добавить запрос на получение пиццы с бэкенда (fetch)" />
+    <MESSAGE value="fix: eslint function no-use-before-define" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: eslint function no-use-before-define" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
