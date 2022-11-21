@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="refactor: добавить обработку ошибок в запрос пицц">
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" />
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="refactor: перенастроить prettier и eslint">
+      <change afterPath="$PROJECT_DIR$/src/components/PizzaCard/Skeleton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PizzaCard/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,8 @@
       <workItem from="1668618371801" duration="24000" />
       <workItem from="1668704940740" duration="1281000" />
       <workItem from="1668789490960" duration="3418000" />
-      <workItem from="1668797502139" duration="945000" />
+      <workItem from="1668797502139" duration="1015000" />
+      <workItem from="1669050158681" duration="2146000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -152,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668793209796</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="refactor: перенастроить prettier и eslint">
+      <created>1668798515575</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668798515575</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +203,8 @@
     <MESSAGE value="features: добавить запрос на получение пиццы с бэкенда (fetch)" />
     <MESSAGE value="fix: eslint function no-use-before-define" />
     <MESSAGE value="refactor: добавить обработку ошибок в запрос пицц" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: добавить обработку ошибок в запрос пицц" />
+    <MESSAGE value="refactor: перенастроить prettier и eslint" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: перенастроить prettier и eslint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

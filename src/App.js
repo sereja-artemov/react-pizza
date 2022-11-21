@@ -4,9 +4,11 @@ import Header from './components/Header';
 import Sort from './components/Sort';
 import Categories from './components/Categories';
 import PizzaCard from './components/PizzaCard';
+import Skeleton from './components/PizzaCard/Skeleton';
 
 function App() {
   const [pizzaItems, setPizzaItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getPizzaItems();
@@ -35,10 +37,9 @@ function App() {
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
-            {pizzaItems.map((pizza) => (
-              /* eslint-disable react/jsx-props-no-spreading */
-              <PizzaCard key={pizza.id} {...pizza} />
-            ))}
+            {isLoading
+              ? pizzaItems.map((pizza) => <PizzaCard key={pizza.id} {...pizza} />)
+              : [...new Array(6)].map((_, index) => <Skeleton key={index} />)}
           </div>
         </div>
       </div>

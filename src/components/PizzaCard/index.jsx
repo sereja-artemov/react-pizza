@@ -1,29 +1,35 @@
 import React, { useState } from 'react';
 
-function PizzaCard({
-  title, price, imageUrl, sizes, types,
-}) {
+function PizzaCard({ title, price, imageUrl, sizes, types }) {
   const typeNames = ['тонкое', 'традиционное'];
   const [activeType, setActiveType] = useState(0);
   const [activeSize, setActiveSize] = useState(0);
 
   return (
     <div className="pizza-block">
-      <img
-        className="pizza-block__image"
-        src={imageUrl}
-        alt="Pizza"
-      />
+      <img className="pizza-block__image" src={imageUrl} alt="Pizza" />
       <h4 className="pizza-block__title">{title}</h4>
       <div className="pizza-block__selector">
         <ul>
           {types.map((type, index) => (
-            <li key={type} onClick={() => setActiveType(index)} className={activeType === index ? 'active' : ''}>{typeNames[type]}</li>
+            <li
+              key={type}
+              onClick={() => setActiveType(index)}
+              className={activeType === index ? 'active' : ''}
+            >
+              {typeNames[type]}
+            </li>
           ))}
         </ul>
         <ul>
           {sizes.map((size, index) => (
-            <li key={size} onClick={() => setActiveSize(index)} className={activeSize === index ? 'active' : ''}>{size} см.</li>
+            <li
+              key={size}
+              onClick={() => setActiveSize(index)}
+              className={activeSize === index ? 'active' : ''}
+            >
+              {size} см.
+            </li>
           ))}
         </ul>
       </div>
