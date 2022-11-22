@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './scss/app.scss';
 import Header from './components/Header';
 import Sort from './components/Sort';
@@ -15,6 +15,7 @@ function App() {
   }, []);
 
   function getPizzaItems() {
+    setIsLoading(true);
     fetch('https://63767267b5f0e1eb850c0eef.mockapi.io/items')
       .then((res) => {
         if (!res.ok) {
@@ -22,24 +23,27 @@ function App() {
         }
         return res.json();
       })
-      .then((data) => setPizzaItems(data))
+      .then((data) => {
+        setPizzaItems(data);
+        setIsLoading(false);
+      })
       .catch((err) => console.log(err));
   }
 
   return (
     <div className="wrapper">
-      <Header />
+      <Header/>
       <div className="content">
         <div className="container">
           <div className="content__top">
-            <Categories />
-            <Sort />
+            <Categories/>
+            <Sort/>
           </div>
           <h2 className="content__title">Все пиццы</h2>
           <div className="content__items">
             {isLoading
-              ? pizzaItems.map((pizza) => <PizzaCard key={pizza.id} {...pizza} />)
-              : [...new Array(6)].map((_, index) => <Skeleton key={index} />)}
+              ? [...new Array(6)].map((_, index) => <Skeleton key={index}/>)
+              : pizzaItems.map((pizza) => <PizzaCard key={pizza.id} {...pizza} />)}
           </div>
         </div>
       </div>
