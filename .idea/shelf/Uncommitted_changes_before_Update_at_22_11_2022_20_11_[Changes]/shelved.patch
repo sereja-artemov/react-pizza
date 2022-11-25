@@ -1,0 +1,56 @@
+Index: src/components/PizzaCard/Skeleton.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport ContentLoader from 'react-content-loader';\r\n\r\nconst Skeleton = (props) => (\r\n  <ContentLoader\r\n    className=\"pizza-block\"\r\n    speed={0}\r\n    width={280}\r\n    height={480}\r\n    viewBox=\"0 0 280 480\"\r\n    backgroundColor=\"#f3f3f3\"\r\n    foregroundColor=\"#ecebeb\"\r\n    {...props}\r\n  >\r\n    <circle cx=\"140\" cy=\"125\" r=\"125\" />\r\n    <rect x=\"105\" y=\"331\" rx=\"0\" ry=\"0\" width=\"1\" height=\"0\" />\r\n    <rect x=\"0\" y=\"295\" rx=\"11\" ry=\"11\" width=\"280\" height=\"31\" />\r\n    <rect x=\"0\" y=\"346\" rx=\"11\" ry=\"11\" width=\"280\" height=\"59\" />\r\n    <rect x=\"0\" y=\"434\" rx=\"11\" ry=\"11\" width=\"95\" height=\"35\" />\r\n    <rect x=\"125\" y=\"427\" rx=\"20\" ry=\"20\" width=\"152\" height=\"45\" />\r\n  </ContentLoader>\r\n);\r\n\r\nexport default Skeleton;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/PizzaCard/Skeleton.jsx b/src/components/PizzaCard/Skeleton.jsx
+--- a/src/components/PizzaCard/Skeleton.jsx	
++++ b/src/components/PizzaCard/Skeleton.jsx	
+@@ -1,24 +1,26 @@
+ import React from 'react';
+ import ContentLoader from 'react-content-loader';
+ 
+-const Skeleton = (props) => (
+-  <ContentLoader
+-    className="pizza-block"
+-    speed={0}
+-    width={280}
+-    height={480}
+-    viewBox="0 0 280 480"
+-    backgroundColor="#f3f3f3"
+-    foregroundColor="#ecebeb"
+-    {...props}
+-  >
+-    <circle cx="140" cy="125" r="125" />
+-    <rect x="105" y="331" rx="0" ry="0" width="1" height="0" />
+-    <rect x="0" y="295" rx="11" ry="11" width="280" height="31" />
+-    <rect x="0" y="346" rx="11" ry="11" width="280" height="59" />
+-    <rect x="0" y="434" rx="11" ry="11" width="95" height="35" />
+-    <rect x="125" y="427" rx="20" ry="20" width="152" height="45" />
+-  </ContentLoader>
+-);
++function Skeleton(props) {
++  return (
++    <ContentLoader
++      className="pizza-block"
++      speed={2}
++      width={280}
++      height={480}
++      viewBox="0 0 280 480"
++      backgroundColor="#f3f3f3"
++      foregroundColor="#ecebeb"
++      {...props}
++    >
++      <circle cx="140" cy="125" r="125" />
++      <rect x="105" y="331" rx="0" ry="0" width="1" height="0" />
++      <rect x="0" y="295" rx="11" ry="11" width="280" height="31" />
++      <rect x="0" y="346" rx="11" ry="11" width="280" height="59" />
++      <rect x="0" y="434" rx="11" ry="11" width="95" height="35" />
++      <rect x="125" y="427" rx="20" ry="20" width="152" height="45" />
++    </ContentLoader>
++  );
++}
+ 
+ export default Skeleton;

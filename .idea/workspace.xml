@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="refactor: перенастроить prettier и eslint">
-      <change afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/NotFoundBlock.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/NotFoundBlock.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Cart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/NotFound.jsx" afterDir="false" />
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить Роуты и стартовые компоненты страниц Cart, Home, NotFound">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_pizza-block.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +14,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="82111419ba4d489704d3574fc633e506156b74c9" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -185,7 +184,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
