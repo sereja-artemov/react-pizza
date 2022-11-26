@@ -1,17 +1,21 @@
 import React from 'react';
 
-function Search() {
+function Search({ searchValue, setSearchValue }) {
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+  }
+
   return (
-    <form
-      id="search-form"
-      className="search-form"
-    >
+    <form onSubmit={handleFormSubmit} id="search-form" className="search-form">
       <div className="search-form__field-wrapper">
         <input
           type="text"
           name="text"
           className="search-form__search-input"
           placeholder="Например, пепперони"
+          value={searchValue}
+          onChange={(event) => setSearchValue(event.target.value)}
         />
         <label
           htmlFor="search-film-submit"

@@ -4,7 +4,7 @@ import Sort from '../Sort';
 import Skeleton from '../PizzaCard/Skeleton';
 import PizzaCard from '../PizzaCard';
 
-function Home() {
+function Home({searchValue}) {
   const [pizzaItems, setPizzaItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [categoryId, setCategoryId] = useState(0);
@@ -39,6 +39,14 @@ function Home() {
       .catch((err) => console.log(err));
   }
 
+  const pizzas = pizzaItems.filter((pizza) => {
+    if (pizza.title.toLowerCase().includes(searchValue.toLowerCase())) {
+      return true;
+    }
+    return false;
+  }).map((pizza) => <PizzaCard key={pizza.id} {...pizza} />);
+  const skeleton = [...new Array(6)].map((_, index) => <Skeleton key={index} />);
+
   return (
     <>
       <div className="content__top">
@@ -48,8 +56,8 @@ function Home() {
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">
         {isLoading
-          ? [...new Array(6)].map((_, index) => <Skeleton key={index} />)
-          : pizzaItems.map((pizza) => <PizzaCard key={pizza.id} {...pizza} />)}
+          ? skeleton
+          : pizzas }
       </div>
     </>
   );
