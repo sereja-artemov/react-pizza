@@ -33,6 +33,11 @@
     p {
       color: #7b7b7b;
     }
+    @media (max-width: 990px) {
+      &-link {
+        width: 100%;
+      }
+    }
   }
   &__cart {
     flex-shrink: 0;

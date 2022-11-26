@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить Роуты и стартовые компоненты страниц Cart, Home, NotFound">
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить функционал сортировки и фильтрации пицц">
+      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Categories.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_sort.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_sort.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_header.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +97,7 @@
       <workItem from="1668789490960" duration="3418000" />
       <workItem from="1668797502139" duration="1015000" />
       <workItem from="1669050158681" duration="2146000" />
+      <workItem from="1669467357251" duration="2925000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -167,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668798515575</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="features: добавить функционал сортировки и фильтрации пицц">
+      <created>1669403458533</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1669403458533</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +217,8 @@
     <MESSAGE value="fix: eslint function no-use-before-define" />
     <MESSAGE value="refactor: добавить обработку ошибок в запрос пицц" />
     <MESSAGE value="refactor: перенастроить prettier и eslint" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: перенастроить prettier и eslint" />
+    <MESSAGE value="features: добавить функционал сортировки и фильтрации пицц" />
+    <option name="LAST_COMMIT_MESSAGE" value="features: добавить функционал сортировки и фильтрации пицц" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
