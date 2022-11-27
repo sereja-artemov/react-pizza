@@ -1,6 +1,9 @@
 import React from 'react';
+import { useContext } from 'react';
+import { searchContext } from '../../App';
 
-function Search({ searchValue, setSearchValue }) {
+function Search() {
+  const { searchValue, setSearchValue } = useContext(searchContext);
 
   function handleFormSubmit(event) {
     event.preventDefault();

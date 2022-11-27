@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить пагинацию">
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Home.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +95,9 @@
       <workItem from="1668789490960" duration="3418000" />
       <workItem from="1668797502139" duration="1015000" />
       <workItem from="1669050158681" duration="2146000" />
-      <workItem from="1669467357251" duration="11347000" />
+      <workItem from="1669467357251" duration="11433000" />
+      <workItem from="1669485713594" duration="30000" />
+      <workItem from="1669546709467" duration="2643000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -196,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669475639224</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="features: добавить пагинацию">
+      <created>1669485665128</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1669485665128</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
