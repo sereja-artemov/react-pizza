@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useContext} from 'react';
-import Categories from '../Categories';
-import Sort from '../Sort';
-import Skeleton from '../PizzaCard/Skeleton';
-import PizzaCard from '../PizzaCard';
-import Pagination from "../Pagination/Pagination";
-import {searchContext} from "../../App";
+import Categories from '../components/Categories';
+import Sort from '../components/Sort';
+import Skeleton from '../components/PizzaCard/Skeleton';
+import PizzaCard from '../components/PizzaCard';
+import Pagination from "../components/Pagination/Pagination";
+import {searchContext} from "../App";
 
 function Home() {
   const { searchValue } = useContext(searchContext);
