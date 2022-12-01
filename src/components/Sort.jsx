@@ -50,6 +50,7 @@ function Sort() {
           <ul>
             {sortListArr.map((obj, index) => (
               <li
+                key={index}
                 onClick={() => handleSetActiveIndex(obj)}
                 className={
                   sort.sortProperty === obj.sortProperty ? 'active' : ''
