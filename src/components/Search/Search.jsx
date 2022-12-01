@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { useContext } from 'react';
+import debounce from 'lodash.debounce';
+
 import { searchContext } from '../../App';
 
 function Search() {
-  const { searchValue, setSearchValue } = useContext(searchContext);
+  const [value, setValue] = useState('');
+  const { setSearchValue } = useContext(searchContext);
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
-  }
+  const updateSearchValue = useCallback(
+    debounce((value) => setSearchValue(value), 250),
+    []
+  );
 
   return (
-    <form onSubmit={handleFormSubmit} id="search-form" className="search-form">
+    <form id="search-form" className="search-form">
       <div className="search-form__field-wrapper">
         <input
           type="text"
           name="text"
           className="search-form__search-input"
           placeholder="Например, пепперони"
-          value={searchValue}
-          onChange={(event) => setSearchValue(event.target.value)}
+          value={value}
+          onChange={(event) => {
+            setValue(event.target.value);
+            updateSearchValue(value);
+          }}
         />
         <label
           htmlFor="search-film-submit"

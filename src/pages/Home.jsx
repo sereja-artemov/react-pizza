@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setCategoryId } from '../redux/slices/filterSlice';
+import { setCategoryId, setCurrentPage } from '../redux/slices/filterSlice';
+import axios from 'axios';
 
 import Categories from '../components/Categories';
 import Sort from '../components/Sort';
@@ -11,16 +12,19 @@ import { searchContext } from '../App';
 
 function Home() {
   const dispatch = useDispatch();
-  const { categoryId, sort } = useSelector((state) => state.filter);
+  const { categoryId, sort, currentPage } = useSelector((state) => state.filter);
 
   const { searchValue } = useContext(searchContext);
 
   const [pizzaItems, setPizzaItems] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
 
   function onChangeCategory(id) {
     dispatch(setCategoryId(id));
+  }
+
+  function onChangePage(number) {
+    dispatch(setCurrentPage(number));
   }
 
   useEffect(() => {
@@ -29,24 +33,21 @@ function Home() {
 
   function getPizzaItems() {
     setIsLoading(true);
-    fetch(
-      `https://63767267b5f0e1eb850c0eef.mockapi.io/items?page=${currentPage}&limit=4&${
-        categoryId > 0 ? `category=${categoryId}` : ''
-      }&sortBy=${sort.sortProperty.replace('-', '')}&order=${
-        sort.sortProperty.includes('-') ? 'asc' : 'desc'
-      }${searchValue ? `&search=${searchValue}` : ''}`
-    )
+    axios
+      .get(
+        `https://63767267b5f0e1eb850c0eef.mockapi.io/items?page=${currentPage}&limit=4&${
+          categoryId > 0 ? `category=${categoryId}` : ''
+        }&sortBy=${sort.sortProperty.replace('-', '')}&order=${
+          sort.sortProperty.includes('-') ? 'asc' : 'desc'
+        }${searchValue ? `&search=${searchValue}` : ''}`
+      )
       .then((res) => {
-        if (!res.ok) {
-          throw new Error('Упс, что-то сломалось');
-        }
-        return res.json();
-      })
-      .then((data) => {
-        setPizzaItems(data);
+        setPizzaItems(res.data);
         setIsLoading(false);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err.message);
+      });
   }
 
   const pizzas = pizzaItems.map((pizza) => (
@@ -64,7 +65,7 @@ function Home() {
       </div>
       <h2 className="content__title">Все пиццы</h2>
       <div className="content__items">{isLoading ? skeleton : pizzas}</div>
-      <Pagination onChangePage={setCurrentPage} />
+      <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </>
   );
 }
