@@ -1,23 +1,25 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setSortProperty } from '../redux/slices/filterSlice'
+import { setSortProperty, setSortName } from '../redux/slices/filterSlice'
+
+export const sortListArr = [
+  { name: 'популярности (DESC)', sortProperty: 'rating' },
+  { name: 'популярности (ASC)', sortProperty: '-rating' },
+  { name: 'цене (DESC)', sortProperty: 'price' },
+  { name: 'цене (ASC)', sortProperty: '-price' },
+  { name: 'алфавиту (DESC)', sortProperty: 'title' },
+  { name: 'алфавиту (ASC)', sortProperty: '-title' },
+];
 
 function Sort() {
   const dispatch = useDispatch();
   const sort = useSelector(state => state.filter.sort)
 
   const [isSortPopupOpen, setIsSortPopupOpen] = useState(false);
-  const sortListArr = [
-    { name: 'популярности (DESC)', sortProperty: 'rating' },
-    { name: 'популярности (ASC)', sortProperty: '-rating' },
-    { name: 'цене (DESC)', sortProperty: 'price' },
-    { name: 'цене (ASC)', sortProperty: '-price' },
-    { name: 'алфавиту (DESC)', sortProperty: 'title' },
-    { name: 'алфавиту (ASC)', sortProperty: '-title' },
-  ];
 
   function handleSetActiveIndex(obj) {
-    dispatch(setSortProperty(obj.sortProperty))
+    dispatch(setSortProperty(obj.sortProperty));
+    dispatch(setSortName(obj.name));
     setIsSortPopupOpen(false);
   }
 

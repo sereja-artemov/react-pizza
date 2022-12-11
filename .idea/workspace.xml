@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить поиск с помощью Debounce, пагинация через Redux Toolkit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/filterSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/filterSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="82111419ba4d489704d3574fc633e506156b74c9" />
+        <entry key="$PROJECT_DIR$" value="0142afc4c825222db2a9dfb8e92cfd20581dcb95" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,6 +115,7 @@
       <workItem from="1670425434056" duration="21000" />
       <workItem from="1670517103171" duration="1153000" />
       <workItem from="1670519960630" duration="1297000" />
+      <workItem from="1670765173600" duration="3397000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
