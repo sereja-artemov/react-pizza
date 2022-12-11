@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить поиск с помощью Debounce, пагинация через Redux Toolkit">
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: сохранить параметры фильтрации в URL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/filterSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/filterSlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +113,7 @@
       <workItem from="1670425434056" duration="21000" />
       <workItem from="1670517103171" duration="1153000" />
       <workItem from="1670519960630" duration="1297000" />
-      <workItem from="1670765173600" duration="3397000" />
+      <workItem from="1670765173600" duration="6233000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -243,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669829735876</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="features: сохранить параметры фильтрации в URL">
+      <created>1670769243814</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670769243814</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +297,8 @@
     <MESSAGE value="features: установить redux" />
     <MESSAGE value="features: добавить сортировку и фильтрацию в redux" />
     <MESSAGE value="features: добавить поиск с помощью Debounce, пагинация через Redux Toolkit" />
-    <option name="LAST_COMMIT_MESSAGE" value="features: добавить поиск с помощью Debounce, пагинация через Redux Toolkit" />
+    <MESSAGE value="features: сохранить параметры фильтрации в URL" />
+    <option name="LAST_COMMIT_MESSAGE" value="features: сохранить параметры фильтрации в URL" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
