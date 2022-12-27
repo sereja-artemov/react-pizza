@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: добавить скрытие сортировки при клике вне попапа сортировки">
-      <change afterPath="$PROJECT_DIR$/src/components/CartItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/cartEmpty.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/slices/pizzaSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotFoundBlock/NotFoundBlock.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotFoundBlock/NotFoundBlock.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +49,10 @@
     &quot;last_opened_file_path&quot;: &quot;D:/sereja/Обучение/dev/react-pizza&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Сережа\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
@@ -127,6 +127,12 @@
       <workItem from="1671123455805" duration="117000" />
       <workItem from="1671363886011" duration="4292000" />
       <workItem from="1671471315609" duration="4945000" />
+      <workItem from="1671730291956" duration="1250000" />
+      <workItem from="1671993045554" duration="1501000" />
+      <workItem from="1672075260362" duration="4265000" />
+      <workItem from="1672080802716" duration="154000" />
+      <workItem from="1672081355991" duration="1261000" />
+      <workItem from="1672163054932" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>

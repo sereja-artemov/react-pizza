@@ -5,7 +5,7 @@ import {
   setCurrentPage,
   setFilters,
 } from '../redux/slices/filterSlice';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import qs from 'qs';
 
@@ -15,6 +15,8 @@ import Skeleton from '../components/PizzaCard/Skeleton';
 import PizzaCard from '../components/PizzaCard';
 import Pagination from '../components/Pagination/Pagination';
 import { searchContext } from '../App';
+import {fetchPizzas, setItems} from '../redux/slices/pizzaSlice';
+import cartImg from "../assets/img/empty-cart.png";
 
 function Home() {
   const navigate = useNavigate();
@@ -25,8 +27,7 @@ function Home() {
 
   const { searchValue } = useContext(searchContext);
 
-  const [pizzaItems, setPizzaItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const { items, status } = useSelector((state) => state.pizza);
   const isSearch = useRef(false);
   const isMounted = useRef(false);
 
@@ -71,26 +72,18 @@ function Home() {
     isMounted.current = true;
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
-  function getPizzaItems() {
-    setIsLoading(true);
-    axios
-      .get(
-        `https://63767267b5f0e1eb850c0eef.mockapi.io/items?page=${currentPage}&limit=4&${
-          categoryId > 0 ? `category=${categoryId}` : ''
-        }&sortBy=${sort.sortProperty.replace('-', '')}&order=${
-          sort.sortProperty.includes('-') ? 'asc' : 'desc'
-        }${searchValue ? `&search=${searchValue}` : ''}`
-      )
-      .then((res) => {
-        setPizzaItems(res.data);
-        setIsLoading(false);
+  async function getPizzaItems() {
+    dispatch(
+      fetchPizzas({
+        currentPage,
+        categoryId,
+        searchValue,
+        sort,
       })
-      .catch((err) => {
-        console.log(err.message);
-      });
+    );
   }
 
-  const pizzas = pizzaItems.map((pizza) => (
+  const pizzas = items.map((pizza) => (
     <PizzaCard key={pizza.id} {...pizza} />
   ));
   const skeleton = [...new Array(6)].map((_, index) => (
@@ -104,7 +97,20 @@ function Home() {
         <Sort />
       </div>
       <h2 className="content__title">Все пиццы</h2>
-      <div className="content__items">{isLoading ? skeleton : pizzas}</div>
+      {status === 'error' ? (
+        <div className="content__error-info">
+          <h2>
+            Произошла ошибка <icon>😕</icon>
+          </h2>
+          <p>
+            К сожалению, не удалось получить пиццы. Попробуйте повторить попытку позже.
+          </p>
+        </div>
+      ) : (
+        <div className="content__items">
+          {status === 'loading' ? skeleton : pizzas}
+        </div>
+      )}
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </>
   );
