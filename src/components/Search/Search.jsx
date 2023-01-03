@@ -1,17 +1,25 @@
 import React, { useCallback, useState } from 'react';
-import { useContext } from 'react';
 import debounce from 'lodash.debounce';
-
-import { searchContext } from '../../App';
+import { useDispatch } from 'react-redux';
+import { setSearchValue } from "../../redux/slices/filterSlice";
 
 function Search() {
+  const dispatch = useDispatch();
   const [value, setValue] = useState('');
-  const { setSearchValue } = useContext(searchContext);
-
   const updateSearchValue = useCallback(
-    debounce((value) => setSearchValue(value), 250),
+    debounce((value) => {
+      dispatch(
+        setSearchValue(value)
+      )
+    }, 150),
     []
   );
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    setValue(event.target.value);
+    updateSearchValue(value);
+  }
 
   return (
     <form id="search-form" className="search-form">
@@ -22,10 +30,7 @@ function Search() {
           className="search-form__search-input"
           placeholder="Например, пепперони"
           value={value}
-          onChange={(event) => {
-            setValue(event.target.value);
-            updateSearchValue(value);
-          }}
+          onChange={handleSearch}
         />
         <label
           htmlFor="search-film-submit"
@@ -37,6 +42,7 @@ function Search() {
             name="submit"
             className="search-form__submit"
             value=""
+            onClick={handleSearch}
           />
           <svg
             className="search-form__submit-icon"

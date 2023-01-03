@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   selectFilter,
@@ -14,15 +14,12 @@ import Sort, { sortListArr } from '../components/Sort';
 import Skeleton from '../components/PizzaCard/Skeleton';
 import PizzaCard from '../components/PizzaCard';
 import Pagination from '../components/Pagination/Pagination';
-import { searchContext } from '../App';
 import {fetchPizzas, selectPizzaData} from '../redux/slices/pizzaSlice';
 
 function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { categoryId, sort, currentPage } = useSelector(selectFilter);
-
-  const { searchValue } = useContext(searchContext);
+  const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
 
   const { items, status } = useSelector(selectPizzaData);
   const isSearch = useRef(false);
