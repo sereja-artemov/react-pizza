@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useContext, useRef } from 'react';
+import React, { useEffect, useContext, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  selectFilter,
   setCategoryId,
   setCurrentPage,
   setFilters,
 } from '../redux/slices/filterSlice';
-import {Link, useNavigate} from 'react-router-dom';
-import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 import qs from 'qs';
 
 import Categories from '../components/Categories';
@@ -15,19 +15,16 @@ import Skeleton from '../components/PizzaCard/Skeleton';
 import PizzaCard from '../components/PizzaCard';
 import Pagination from '../components/Pagination/Pagination';
 import { searchContext } from '../App';
-import {fetchPizzas, setItems} from '../redux/slices/pizzaSlice';
-import cartImg from "../assets/img/empty-cart.png";
+import {fetchPizzas, selectPizzaData} from '../redux/slices/pizzaSlice';
 
 function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { categoryId, sort, currentPage } = useSelector(
-    (state) => state.filter
-  );
+  const { categoryId, sort, currentPage } = useSelector(selectFilter);
 
   const { searchValue } = useContext(searchContext);
 
-  const { items, status } = useSelector((state) => state.pizza);
+  const { items, status } = useSelector(selectPizzaData);
   const isSearch = useRef(false);
   const isMounted = useRef(false);
 
