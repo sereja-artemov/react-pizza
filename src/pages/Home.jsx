@@ -6,7 +6,7 @@ import {
   setCurrentPage,
   setFilters,
 } from '../redux/slices/filterSlice';
-import {useNavigate} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import qs from 'qs';
 
 import Categories from '../components/Categories';
@@ -78,7 +78,10 @@ function Home() {
   }
 
   const pizzas = items.map((pizza) => (
-    <PizzaCard key={pizza.id} {...pizza} />
+    <Link to={`/pizza/${pizza.id}`} key={pizza.id}>
+      <PizzaCard {...pizza} />
+    </Link>
+    
   ));
   const skeleton = [...new Array(6)].map((_, index) => (
     <Skeleton key={index} />
