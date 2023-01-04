@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CartItem from '../components/CartItem';
 import {clearItems, selectCartData} from "../redux/slices/cartSlice";
-import CartEmpty from "../components/cartEmpty";
+import ArtEmpty from "../components/СartEmpty";
 
 function Cart() {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function Cart() {
   }
 
   if (!totalPrice) {
-    return <CartEmpty />
+    return <ArtEmpty />
   }
 
   return (

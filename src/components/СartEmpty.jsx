@@ -2,7 +2,7 @@ import React from 'react';
 import cartImg from '../assets/img/empty-cart.png';
 import { Link } from "react-router-dom";
 
-function CartEmpty() {
+function ArtEmpty() {
   return (
     <div className="content">
       <div className="container container--cart">
@@ -25,4 +25,4 @@ function CartEmpty() {
   );
 }
 
-export default CartEmpty;
+export default ArtEmpty;
