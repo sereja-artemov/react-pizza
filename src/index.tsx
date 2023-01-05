@@ -7,7 +7,7 @@ import { store } from './redux/store';
 
 import App from './App';
 
-const root = ReactDOM.createRoot(
+const root = ReactDOM.createRoot  (
   document.getElementById('root') as HTMLElement,
 );
 root.render(
