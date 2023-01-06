@@ -15,9 +15,9 @@ const Search: React.FC = () => {
     []
   );
 
-  const handleSearch = (event: any) => {
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement> | React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    setValue(event.target.value);
+    setValue((event.target as HTMLInputElement).value);
     updateSearchValue(value);
   }
 
