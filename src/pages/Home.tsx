@@ -6,7 +6,7 @@ import {
   setCurrentPage,
   setFilters,
 } from '../redux/slices/filterSlice';
-import {Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import qs from 'qs';
 
 import Categories from '../components/Categories';
@@ -16,7 +16,7 @@ import PizzaCard from '../components/PizzaCard';
 import Pagination from '../components/Pagination/Pagination';
 import {fetchPizzas, selectPizzaData} from '../redux/slices/pizzaSlice';
 
-function Home() {
+const Home: React.FC = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
@@ -25,11 +25,11 @@ function Home() {
   const isSearch = useRef(false);
   const isMounted = useRef(false);
 
-  function onChangeCategory(id) {
+  function onChangeCategory(id: number) {
     dispatch(setCategoryId(id));
   }
 
-  function onChangePage(number) {
+  function onChangePage(number: number) {
     dispatch(setCurrentPage(number));
   }
 
@@ -67,7 +67,9 @@ function Home() {
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
   async function getPizzaItems() {
+
     dispatch(
+      // @ts-ignore
       fetchPizzas({
         currentPage,
         categoryId,
@@ -77,7 +79,7 @@ function Home() {
     );
   }
 
-  const pizzas = items.map((pizza) => (
+  const pizzas = items.map((pizza: any) => (
 
       <PizzaCard {...pizza} key={pizza.id} />
 
@@ -96,7 +98,7 @@ function Home() {
       {status === 'error' ? (
         <div className="content__error-info">
           <h2>
-            Произошла ошибка <icon>😕</icon>
+            Произошла ошибка <span>😕</span>
           </h2>
           <p>
             К сожалению, не удалось получить пиццы. Попробуйте повторить попытку позже.
@@ -110,6 +112,6 @@ function Home() {
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </>
   );
-}
+};
 
 export default Home;

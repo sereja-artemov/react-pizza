@@ -4,10 +4,10 @@ import CartItem from '../components/CartItem';
 import {clearItems, selectCartData} from "../redux/slices/cartSlice";
 import ArtEmpty from "../components/СartEmpty";
 
-function Cart() {
+const Cart: React.FC = () => {
   const dispatch = useDispatch();
   const { items, totalPrice } = useSelector(selectCartData);
-  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+  const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
 
   function handleClearCart() {
     if (window.confirm('Удалить все товары из корзины?')) {
@@ -98,7 +98,7 @@ function Cart() {
             </div>
           </div>
           <div className="content__items">
-            {items.map((item) => {
+            {items.map((item: any) => {
               return <CartItem key={item.id} {...item} />;
             })}
           </div>
@@ -145,6 +145,6 @@ function Cart() {
       </div>
     </div>
   );
-}
+};
 
 export default Cart;

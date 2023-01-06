@@ -3,7 +3,7 @@ import debounce from 'lodash.debounce';
 import { useDispatch } from 'react-redux';
 import { setSearchValue } from "../../redux/slices/filterSlice";
 
-function Search() {
+const Search: React.FC = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState('');
   const updateSearchValue = useCallback(
@@ -15,7 +15,7 @@ function Search() {
     []
   );
 
-  const handleSearch = (event) => {
+  const handleSearch = (event: any) => {
     event.preventDefault();
     setValue(event.target.value);
     updateSearchValue(value);
@@ -63,6 +63,6 @@ function Search() {
       </div>
     </form>
   );
-}
+};
 
 export default Search;

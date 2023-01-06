@@ -1,9 +1,25 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {addItem, selectCartItemById} from "../../redux/slices/cartSlice";
-import {Link} from "react-router-dom";
+import { addItem, selectCartItemById } from '../../redux/slices/cartSlice';
+import { Link } from 'react-router-dom';
 
-function PizzaCard({ id, title, price, imageUrl, sizes, types }) {
+type PizzaCardProps = {
+  id: string;
+  title: string;
+  price: number;
+  imageUrl: string;
+  sizes: number[];
+  types: number[];
+};
+
+const PizzaCard: React.FC<PizzaCardProps> = ({
+  id,
+  title,
+  price,
+  imageUrl,
+  sizes,
+  types,
+}) => {
   const dispatch = useDispatch();
   const typeNames = ['тонкое', 'традиционное'];
   const [activeType, setActiveType] = useState(0);
@@ -77,6 +93,6 @@ function PizzaCard({ id, title, price, imageUrl, sizes, types }) {
       </div>
     </div>
   );
-}
+};
 
 export default PizzaCard;

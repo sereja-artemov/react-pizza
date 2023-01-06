@@ -1,8 +1,9 @@
 import React, {useEffect, useRef, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {setSortProperty, setSortName, selectSort} from '../redux/slices/filterSlice'
+import {setSortProperty, setSortName, selectSort} from '../redux/slices/filterSlice';
 
-export const sortListArr = [
+type SortItemType = { sortProperty: string, name: string };
+export const sortListArr: SortItemType[] = [
   { name: 'популярности (DESC)', sortProperty: 'rating' },
   { name: 'популярности (ASC)', sortProperty: '-rating' },
   { name: 'цене (DESC)', sortProperty: 'price' },
@@ -11,21 +12,22 @@ export const sortListArr = [
   { name: 'алфавиту (ASC)', sortProperty: '-title' },
 ];
 
-function Sort() {
+const Sort: React.FC = () => {
   const dispatch = useDispatch();
   const sort = useSelector(selectSort);
 
   const [isSortPopupOpen, setIsSortPopupOpen] = useState(false);
-  const sortRef = useRef();
+  const sortRef = useRef<HTMLDivElement>(null);
 
-  function handleSetActiveIndex(obj) {
+
+  function handleSetActiveIndex(obj: SortItemType) {
     dispatch(setSortProperty(obj.sortProperty));
     dispatch(setSortName(obj.name));
     setIsSortPopupOpen(false);
   }
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: any) => {
       if (!event.path.includes(sortRef.current)) {
         setIsSortPopupOpen(false);
       }
@@ -78,6 +80,6 @@ function Sort() {
       )}
     </div>
   );
-}
+};
 
 export default Sort;

@@ -1,6 +1,11 @@
 import React from 'react';
 
-function Categories({ categoryId, onClick: setCategoryId }) {
+type CategoriesProps = {
+  categoryId: number,
+  onClick: any,
+};
+
+const Categories: React.FC<CategoriesProps> = ({ categoryId, onClick: setCategoryId }) => {
   const pizzaCategories = [
     'Все',
     'Мясные',
@@ -10,7 +15,7 @@ function Categories({ categoryId, onClick: setCategoryId }) {
     'Закрытые',
   ];
 
-  function handleClickCategory(index) {
+  function handleClickCategory(index: number) {
     setCategoryId(index);
   }
 
@@ -24,6 +29,6 @@ function Categories({ categoryId, onClick: setCategoryId }) {
       </ul>
     </div>
   );
-}
+};
 
 export default Categories;
