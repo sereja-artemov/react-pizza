@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import {
   selectFilter,
   setCategoryId,
@@ -15,10 +15,11 @@ import Skeleton from '../components/PizzaCard/Skeleton';
 import PizzaCard from '../components/PizzaCard';
 import Pagination from '../components/Pagination/Pagination';
 import {fetchPizzas, selectPizzaData} from '../redux/slices/pizzaSlice';
+import {useAppDispatch} from '../redux/store';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
 
   const { items, status } = useSelector(selectPizzaData);
@@ -48,6 +49,7 @@ const Home: React.FC = () => {
       const sort = sortListArr.find(
         (obj) => obj.sortProperty === params.sortProperty
       );
+      // @ts-ignore
       dispatch(setFilters({ ...params, sort }));
       isSearch.current = true;
     }
@@ -69,7 +71,6 @@ const Home: React.FC = () => {
   async function getPizzaItems() {
 
     dispatch(
-      // @ts-ignore
       fetchPizzas({
         currentPage,
         categoryId,

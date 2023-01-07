@@ -21,6 +21,7 @@ const Sort: React.FC = () => {
 
 
   function handleSetActiveIndex(obj: SortItemType) {
+    // @ts-ignore
     dispatch(setSortProperty(obj.sortProperty));
     dispatch(setSortName(obj.name));
     setIsSortPopupOpen(false);
