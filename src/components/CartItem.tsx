@@ -23,6 +23,7 @@ const CartItem: React.FC<CartItemProps> = ({
   const dispatch = useDispatch();
 
   function handleClickPlus() {
+    // @ts-ignore
     dispatch(addItem({ id }));
   }
 
