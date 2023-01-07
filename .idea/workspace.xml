@@ -4,10 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="refactor: Оптимизируем перерисовку компонентов">
-      <change afterPath="$PROJECT_DIR$/src/utils/calcTotalPrice.ts" afterDir="false" />
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="fix: расчет цены в корзине при уменьшении товара">
+      <change afterPath="$PROJECT_DIR$/src/redux/cart/selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/cart/slices.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/cart/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/filter/selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/filter/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/pizza/selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/pizza/slices.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/pizza/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/getCartFromLS.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/filter/slices.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/filterSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/pizzaSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/calcTotalPrice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/calcTotalPrice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,28 +59,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/sereja/Обучение/dev/react-pizza&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Сережа\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Template Data Languages&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\sereja\\Обучение\\dev\\react-pizza\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/sereja/Обучение/dev/react-pizza/src/redux/pizza",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Сережа\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "Template Data Languages",
+    "ts.external.directory.path": "D:\\sereja\\Обучение\\dev\\react-pizza\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\sereja\Обучение\dev\react-pizza\src\redux\pizza" />
+      <recent name="D:\sereja\Обучение\dev\react-pizza\src\redux\filter" />
       <recent name="D:\Обучение\dev\react-pizza\src" />
       <recent name="D:\Обучение\dev\react-pizza" />
     </key>
@@ -140,7 +161,9 @@
       <workItem from="1673005570215" duration="10107000" />
       <workItem from="1673028411436" duration="6068000" />
       <workItem from="1673083136092" duration="3543000" />
-      <workItem from="1673089442633" duration="4898000" />
+      <workItem from="1673089442633" duration="5162000" />
+      <workItem from="1673094783477" duration="31000" />
+      <workItem from="1673101292223" duration="4793000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -352,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673093028480</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix: расчет цены в корзине при уменьшении товара">
+      <created>1673094518894</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1673094518894</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +412,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="features: добавить popup сортировки" />
     <MESSAGE value="features: добавить popup сортировки и уникальный key" />
     <MESSAGE value="features: добавить запрос на получение пиццы с бэкенда (fetch)" />
     <MESSAGE value="fix: eslint function no-use-before-define" />
@@ -407,7 +436,8 @@
     <MESSAGE value="features: Типизация Redux Toolkit (TypeScript) - доделать позже" />
     <MESSAGE value="fix: Типизация id в CartItem.tsx" />
     <MESSAGE value="refactor: Оптимизируем перерисовку компонентов" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Оптимизируем перерисовку компонентов" />
+    <MESSAGE value="fix: расчет цены в корзине при уменьшении товара" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: расчет цены в корзине при уменьшении товара" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

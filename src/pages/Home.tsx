@@ -1,11 +1,10 @@
 import React, {useCallback, useEffect, useRef} from 'react';
 import { useSelector } from 'react-redux';
 import {
-  selectFilter,
   setCategoryId,
   setCurrentPage,
   setFilters,
-} from '../redux/slices/filterSlice';
+} from '../redux/filter/slices';
 import {useNavigate} from 'react-router-dom';
 import qs from 'qs';
 
@@ -14,8 +13,10 @@ import Sort, { sortListArr } from '../components/Sort';
 import Skeleton from '../components/PizzaCard/Skeleton';
 import PizzaCard from '../components/PizzaCard';
 import Pagination from '../components/Pagination/Pagination';
-import {fetchPizzas, selectPizzaData} from '../redux/slices/pizzaSlice';
+import {fetchPizzas} from '../redux/pizza/slices';
 import {useAppDispatch} from '../redux/store';
+import { selectFilter } from '../redux/filter/selectors';
+import { selectPizzaData } from '../redux/pizza/selectors';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();

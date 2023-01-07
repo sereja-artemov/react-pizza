@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   addItem,
-  CartItemType,
-  selectCartItemById,
-} from '../../redux/slices/cartSlice';
+} from '../../redux/cart/slices';
 import { Link } from 'react-router-dom';
+import { CartItemType } from '../../redux/cart/types';
+import { selectCartItemById } from '../../redux/cart/selectors';
 
 type PizzaCardProps = {
   id: string;
