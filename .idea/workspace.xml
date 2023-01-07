@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: Типизация onClick, onChange и Event (TypeScript)">
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: Типизация Redux Toolkit (TypeScript) - доделать позже">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PizzaCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/filterSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/filterSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/pizzaSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/pizzaSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +139,8 @@
       <workItem from="1672943226495" duration="1039000" />
       <workItem from="1673005570215" duration="10107000" />
       <workItem from="1673028411436" duration="6068000" />
-      <workItem from="1673083136092" duration="2795000" />
+      <workItem from="1673083136092" duration="3543000" />
+      <workItem from="1673089442633" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -328,7 +324,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673015842871</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="features: Типизация Redux Toolkit (TypeScript) - не доделал">
+      <created>1673086102406</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1673086102406</updated>
+    </task>
+    <task id="LOCAL-00028" summary="features: Типизация Redux Toolkit (TypeScript) - доделать позже">
+      <created>1673086125274</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1673086125274</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,8 +368,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="подготовить проект к разработке" />
-    <MESSAGE value="features: Создать компоненты, SCSS" />
     <MESSAGE value="features: добавить useState для pizza count" />
     <MESSAGE value="features: добавить компонент пицц и категории, рендер списка, spread-оператор" />
     <MESSAGE value="features: добавить popup сортировки" />
@@ -383,7 +391,9 @@
     <MESSAGE value="features: Разбираемся подробней с роутером (useParams, useLocation, Outlet)" />
     <MESSAGE value="features: Типизируем пропсы (props) и хук useRef" />
     <MESSAGE value="features: Типизация onClick, onChange и Event (TypeScript)" />
-    <option name="LAST_COMMIT_MESSAGE" value="features: Типизация onClick, onChange и Event (TypeScript)" />
+    <MESSAGE value="features: Типизация Redux Toolkit (TypeScript) - не доделал" />
+    <MESSAGE value="features: Типизация Redux Toolkit (TypeScript) - доделать позже" />
+    <option name="LAST_COMMIT_MESSAGE" value="features: Типизация Redux Toolkit (TypeScript) - доделать позже" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
