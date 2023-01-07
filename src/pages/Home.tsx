@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 import { useSelector } from 'react-redux';
 import {
   selectFilter,
@@ -26,9 +26,9 @@ const Home: React.FC = () => {
   const isSearch = useRef(false);
   const isMounted = useRef(false);
 
-  function onChangeCategory(id: number) {
+  const onChangeCategory = useCallback((id: number) => {
     dispatch(setCategoryId(id));
-  }
+  }, []);
 
   function onChangePage(number: number) {
     dispatch(setCurrentPage(number));

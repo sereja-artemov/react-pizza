@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import {Link, useLocation, useNavigate} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import logoImg from '../assets/img/pizza-logo.svg';
 import Search from './Search/Search';
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
             </div>
           </div>
         </Link>
-        <Search />
+        { location.pathname !== '/cart' && <Search /> }
         <div className="header__cart">
         {location.pathname !== '/cart' && (
             <Link to="/cart" className="button button--cart">

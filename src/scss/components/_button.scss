@@ -12,6 +12,11 @@
   border: 1px solid transparent;
   @include noselect();
 
+
+  &[disabled] {
+    background-color: #7b7b7b;
+  }
+
   &,
   span {
     color: #fff;
@@ -56,6 +61,18 @@
   &--outline {
     background-color: #fff;
     border-color: $orange;
+
+    &[disabled] {
+      border-color: #7b7b7b;
+      color: #7b7b7b;
+
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+
     &,
     span {
       color: $orange;
@@ -84,6 +101,13 @@
 
     &:active {
       background-color: darken($orange, 8%);
+    }
+
+    &[disabled] {
+      border-color: #7b7b7b;
+      &:hover {
+        background-color: #7b7b7b;
+      }
     }
   }
 

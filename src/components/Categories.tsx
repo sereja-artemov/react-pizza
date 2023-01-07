@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {memo} from 'react';
 
 type CategoriesProps = {
   categoryId: number,
   onClick: (i: number) => void,
 };
 
-const Categories: React.FC<CategoriesProps> = ({ categoryId, onClick: setCategoryId }) => {
+const Categories: React.FC<CategoriesProps> = memo(({ categoryId, onClick: setCategoryId }) => {
   const pizzaCategories = [
     'Все',
     'Мясные',
@@ -29,6 +29,6 @@ const Categories: React.FC<CategoriesProps> = ({ categoryId, onClick: setCategor
       </ul>
     </div>
   );
-};
+});
 
 export default Categories;

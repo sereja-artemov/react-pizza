@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: Типизация Redux Toolkit (TypeScript) - доделать позже">
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="fix: Типизация id в CartItem.tsx">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CartItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CartItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PizzaCard/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/slices/cartSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Categories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Categories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_button.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +143,7 @@
       <workItem from="1673005570215" duration="10107000" />
       <workItem from="1673028411436" duration="6068000" />
       <workItem from="1673083136092" duration="3543000" />
-      <workItem from="1673089442633" duration="326000" />
+      <workItem from="1673089442633" duration="3387000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -338,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673086125274</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="fix: Типизация id в CartItem.tsx">
+      <created>1673089845800</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1673089845800</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +378,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="features: добавить useState для pizza count" />
     <MESSAGE value="features: добавить компонент пицц и категории, рендер списка, spread-оператор" />
     <MESSAGE value="features: добавить popup сортировки" />
     <MESSAGE value="features: добавить popup сортировки и уникальный key" />
@@ -393,7 +402,8 @@
     <MESSAGE value="features: Типизация onClick, onChange и Event (TypeScript)" />
     <MESSAGE value="features: Типизация Redux Toolkit (TypeScript) - не доделал" />
     <MESSAGE value="features: Типизация Redux Toolkit (TypeScript) - доделать позже" />
-    <option name="LAST_COMMIT_MESSAGE" value="features: Типизация Redux Toolkit (TypeScript) - доделать позже" />
+    <MESSAGE value="fix: Типизация id в CartItem.tsx" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Типизация id в CartItem.tsx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
