@@ -5,7 +5,7 @@ import {
   setCurrentPage,
   setFilters,
 } from '../redux/filter/slices';
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import qs from 'qs';
 
 import Categories from '../components/Categories';
