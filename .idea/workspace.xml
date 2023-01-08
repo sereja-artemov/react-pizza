@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="refactor: Сохраняем пиццы в LocalStorage, грамотно структурируем папки проекта">
+    <list default="true" id="ba7eb25b-e83b-4e36-b69f-7f3711add8ab" name="Changes" comment="features: Оптимизируем сборку JS-файла. Code Splitting, Tree Shaking, Reexport">
+      <change afterPath="$PROJECT_DIR$/src/components/PizzaCard/Skeleton/Skeleton.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PizzaCard/Skeleton/Skeleton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/components/_fullPizza.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FullPizza.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FullPizza.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PizzaCard/Skeleton.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/components/_all.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_all.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -41,26 +46,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/sereja/Обучение/dev/react-pizza/src/redux/pizza&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Сережа\\AppData\\Roaming\\npm\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Template Data Languages&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\sereja\\Обучение\\dev\\react-pizza\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/sereja/Обучение/dev/react-pizza/src/redux/pizza",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Сережа\\AppData\\Roaming\\npm\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "Template Data Languages",
+    "ts.external.directory.path": "D:\\sereja\\Обучение\\dev\\react-pizza\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\sereja\Обучение\dev\react-pizza\src\redux\pizza" />
@@ -69,6 +75,7 @@
       <recent name="D:\Обучение\dev\react-pizza" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\sereja\Обучение\dev\react-pizza\src\components\PizzaCard\Skeleton" />
       <recent name="D:\Обучение\dev\react-pizza\src" />
       <recent name="D:\Обучение\dev\react-pizza\src\components\NotFoundBlock" />
       <recent name="D:\Обучение\dev\react-pizza\src\assets" />
@@ -146,7 +153,7 @@
       <workItem from="1673089442633" duration="5162000" />
       <workItem from="1673094783477" duration="31000" />
       <workItem from="1673101292223" duration="6820000" />
-      <workItem from="1673176521087" duration="4844000" />
+      <workItem from="1673176521087" duration="9410000" />
     </task>
     <task id="LOCAL-00001" summary="подключить editorconfig и eslint">
       <created>1667935552262</created>
@@ -372,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673106302754</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="features: Оптимизируем сборку JS-файла. Code Splitting, Tree Shaking, Reexport">
+      <created>1673185283276</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1673185283276</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +416,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="features: добавить запрос на получение пиццы с бэкенда (fetch)" />
     <MESSAGE value="fix: eslint function no-use-before-define" />
     <MESSAGE value="refactor: добавить обработку ошибок в запрос пицц" />
     <MESSAGE value="refactor: перенастроить prettier и eslint" />
@@ -427,7 +440,8 @@
     <MESSAGE value="refactor: Оптимизируем перерисовку компонентов" />
     <MESSAGE value="fix: расчет цены в корзине при уменьшении товара" />
     <MESSAGE value="refactor: Сохраняем пиццы в LocalStorage, грамотно структурируем папки проекта" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: Сохраняем пиццы в LocalStorage, грамотно структурируем папки проекта" />
+    <MESSAGE value="features: Оптимизируем сборку JS-файла. Code Splitting, Tree Shaking, Reexport" />
+    <option name="LAST_COMMIT_MESSAGE" value="features: Оптимизируем сборку JS-файла. Code Splitting, Tree Shaking, Reexport" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

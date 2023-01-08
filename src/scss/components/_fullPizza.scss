@@ -1,0 +1,35 @@
+@import '../variables';
+
+.fullPizza {
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+  }
+  &__price {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  &__content-wrapper {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
